@@ -1,0 +1,28 @@
+- hosts: local
+  user: root
+  sudo: yes
+
+  tasks:
+    - name: Instalação do nginx em sua última versão
+      apt:
+        name: nginx
+        state: latest
+
+    - name: Instalação do ElasticSearch em sua última versão
+      apt:
+        name: elasticsearch
+        state: latest
+      notify: restart elasticsearch
+
+    - name: Copiando arquivos de configuração do ElasticSearch
+      copy: src=./elasticsearch.yml dest=/etc/elasticsearch/elasticsearch.yml
+      copy: src=./elasticsearch dest=/etc/default/elasticsearch
+      notify: restart elasticsearch
+
+    - name: Reiniciando nginx
+      service: name=nginx state=restarted enabled=yes
+      register: es_restarted
+
+    - name: Reiniciando ElasticSearch
+      service: name=elasticsearch state=restarted enabled=yes
+      register: es_restarted

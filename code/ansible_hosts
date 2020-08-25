@@ -1,0 +1,9 @@
+[local]
+localhost, ansible_connection=local
+
+#Para um host genérico, de acesso: 
+#ssh -p port user@host
+#pode ser usado o comando abaixo
+
+#[server_example]
+# host ansible_user=myuser ansible_port=port ansible_connection=ssh
