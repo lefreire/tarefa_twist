@@ -12,6 +12,8 @@ Neste repositório, pode ser encontrada a pasta *code*, onde estão os seguintes
 
 4. **script.sh**: este arquivo contém a execução dos comandos para instalar o nginx e o ElasticSearch, além de verificar se os dois serviços estão sendo executados.
 
+Outro arquivo que pode ser visto é o *configuracoes_necessarias.md*, onde está explicado os passos necessários para tornar um sistema web acessível pela internet.
+
 ## Execução 
 
 Para executar os comandos, dentro da pasta *code*, utilize o comando:
