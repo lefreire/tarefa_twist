@@ -16,5 +16,6 @@ Neste repositório, pode ser encontrada a pasta *code*, onde estão os seguintes
 
 Para executar os comandos, dentro da pasta *code*, utilize o comando:
 
-``` sh script.sh
+```
+sh script.sh
 ```
